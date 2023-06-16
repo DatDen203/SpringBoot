@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="LearnMapper">
+
+	<resultMap type="LearnDto" id="result">
+		<result property="id" column="ID" />
+		<result property="id_student" column="ID_STUDENT" />
+		<result property="id_classroom" column="ID_CLASSROOM" />
+	</resultMap>
+
+
+	<select id="getClassOfOneStudent" parameterType="string"
+		resultType="LearnDto" resultMap="result">
+		SELECT * FROM learn
+		WHERE ID_STUDENT = #{id_student}
+	</select>
+	
+	<select id="gelAllStudentOneClass" parameterType="string"
+		resultType="LearnDto" resultMap="result">
+		SELECT * FROM learn
+		WHERE ID_CLASSROOM = #{id_classroom}
+	</select>
+	
+</mapper>

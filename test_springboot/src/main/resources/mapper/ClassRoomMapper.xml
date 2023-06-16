@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ClassRoomMapper">
+
+	<resultMap type="ClassRoomDto" id="result">
+		<result property="id" column="ID" />
+		<result property="name" column="name" />
+	</resultMap>
+
+	<select id="selectAll" resultType="ClassRoomDto" resultMap="result">
+		SELECT * FROM classroom
+	</select>
+
+	<insert id="insertClassRoom" parameterType="ClassRoomDto"> 
+		insert into classroom (ID, name) values (#{id},#{name})
+	</insert>
+
+	<update id="updateClassRoom" parameterType="ClassRoomDto">
+		update classroom
+		set name = #{name}
+		where ID= #{id}
+	</update>
+
+    <delete id="deleteClass" parameterType="string">
+		DELETE FROM classroom WHERE ID = #{id}
+	</delete>
+	
+	<select id="findById" parameterType="string"
+		resultType="ClassRoomDto" resultMap="result">
+		SELECT * FROM classroom
+		WHERE ID = #{id}
+	</select>
+	
+	<select id="findByName" parameterType="string"
+		resultType="ClassRoomDto" resultMap="result">
+		SELECT * FROM classroom
+		WHERE name = #{name}
+	</select>
+	<select id="getAllClass" parameterType="string"
+		resultType="ClassRoomDto" resultMap="result">
+		select classroom.ID, classroom.name from classroom
+		join teaching on teaching.ID_CLASSROOM = classroom.ID
+		where teaching.ID_TEACHER = '12';
+	</select>
+</mapper>
