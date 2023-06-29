@@ -9,10 +9,10 @@ import com.example.demo.Dao.StudentDaoImpl;
 import com.example.demo.Model.StudentDto;
 
 @Service
-public class StudentServiceImpl implements IStudentService{
+public class StudentServiceImpl implements IStudentService {
 	@Autowired
 	private StudentDaoImpl dao;
-	
+
 	public List<StudentDto> GetListStudent() {
 		return dao.GetListStudent();
 	}

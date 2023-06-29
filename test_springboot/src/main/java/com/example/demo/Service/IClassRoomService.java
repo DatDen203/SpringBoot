@@ -11,16 +11,16 @@ import com.example.demo.Model.StudentDto;
 @Service
 public interface IClassRoomService {
 	@Autowired
-	public List<ClassRoomDto> GetListClass();
+	public List<ClassRoomDto> selectAll();
 	
 	@Autowired
-	public int insert(ClassRoomDto obj);
+	public int insertClassRoom(ClassRoomDto obj);
 	
 	@Autowired
-	public void update(ClassRoomDto obj);
+	public void updateClassRoom(ClassRoomDto obj);
 	
 	@Autowired
-	public void delete(String id);
+	public void deleteClassRoom(String id);
 	
 	@Autowired
 	public ClassRoomDto findById(String id);

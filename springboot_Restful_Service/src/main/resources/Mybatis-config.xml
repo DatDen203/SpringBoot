@@ -5,7 +5,7 @@
 	<typeAliases>
 		<typeAlias alias="StudentDto" type="com.example.Dto.StudentDto"/>
 	</typeAliases>
-	<mappers>
+<!-- 	<mappers>
 		<mapper resource="mapper/StudentMapper.xml"/>
-	</mappers>
+	</mappers> -->
 </configuration>

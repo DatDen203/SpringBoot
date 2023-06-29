@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="TeachingMapper">
+<mapper namespace="com.example.demo.Mapper.TeachingMapper">
 
 	<resultMap type="TeachingDto" id="result1">
 		<result property="ID" column="ID" />
@@ -16,7 +16,7 @@
 		<result property="name" column="name" />
 	</resultMap>
 
-	<select id="getAllClass" parameterType="string"
+	<select id="getAllClassRoom" parameterType="string"
 		resultType="ClassRoomDto" resultMap="result2">
 		select classroom.ID,
 		classroom.name from classroom

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="StudentDto"
+			type="com.example.demo.Model.StudentDto" />
+		<typeAlias alias="UserDto"
+			type="com.example.demo.Model.UserDto" />
+		<typeAlias alias="ClassRoomDto"
+			type="com.example.demo.Model.ClassRoomDto" />
+		<typeAlias alias="TeacherDto"
+			type="com.example.demo.Model.TeacherDto" />
+		<typeAlias alias="TeachingDto"
+			type="com.example.demo.Model.TeachingDto" />
+		<typeAlias alias="UserRoleDto"
+			type="com.example.demo.Model.UserRoleDto" />
+		<typeAlias alias="LearnDto"
+			type="com.example.demo.Model.LearnDto" />
+		<typeAlias alias="CourseDto"
+			type="com.example.demo.Model.CourseDto" />
+	</typeAliases>
+</configuration>

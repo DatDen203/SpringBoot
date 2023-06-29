@@ -11,5 +11,5 @@ public interface LearnDaoMapper {
 	
 	public List<LearnDto> getClassOfOneStudent(String id);
 	
-	public List<LearnDto> getAllStudentOneClass(String id);
+	public List<LearnDto> gelAllStudentOneClass(String id);
 }

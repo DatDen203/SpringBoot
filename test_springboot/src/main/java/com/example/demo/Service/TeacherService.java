@@ -8,35 +8,35 @@ import org.springframework.stereotype.Service;
 import com.example.demo.Dao.TeacherDaoImpl;
 import com.example.demo.Model.TeacherDto;
 
-
 @Service
 public class TeacherService implements ITeacherService {
 	@Autowired
 	private TeacherDaoImpl dao;
+
 	@Override
-	public List<TeacherDto> GetListTeacher() {
+	public List<TeacherDto> selectAll() {
 		// TODO Auto-generated method stub
-		return dao.GetListTeacher();
+		return dao.selectAll();
 	}
 
 	@Override
-	public void insert(TeacherDto obj) {
+	public void insertTeacher(TeacherDto obj) {
 		// TODO Auto-generated method stub
-		dao.insert(obj);
-
-	}
-
-	@Override
-	public void update(TeacherDto obj) {
-		// TODO Auto-generated method stub
-		dao.update(obj);
+		dao.insertTeacher(obj);
 
 	}
 
 	@Override
-	public void delete(String id) {
+	public void updateTeacher(TeacherDto obj) {
 		// TODO Auto-generated method stub
-		dao.delete(id);
+		dao.updateTeacher(obj);
+
+	}
+
+	@Override
+	public void deleteTeacher(String id) {
+		// TODO Auto-generated method stub
+		dao.deleteTeacher(id);
 
 	}
 
@@ -51,9 +51,10 @@ public class TeacherService implements ITeacherService {
 		// TODO Auto-generated method stub
 		return dao.findByName(name);
 	}
+
 	@Override
-	public List<String> getAllID() {
-		return dao.getAllID();
+	public List<String> selectID() {
+		return dao.selectID();
 	}
 
 }

@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource1",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.example.demo.Config.Datasource1_config",
+      "sourceMethod": "public javax.sql.DataSource dataSource1() "
+    },
+    {
+      "name": "spring.datasource2",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.example.demo.Config.Datasource2_config",
+      "sourceMethod": "public javax.sql.DataSource dataSource2() "
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

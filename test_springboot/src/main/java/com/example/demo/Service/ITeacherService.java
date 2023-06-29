@@ -9,16 +9,16 @@ import com.example.demo.Model.TeacherDto;
 @Service
 public interface ITeacherService {
 	@Autowired
-	public List<TeacherDto> GetListTeacher();
+	public List<TeacherDto> selectAll();
 
 	@Autowired
-	public void insert(TeacherDto obj);
+	public void insertTeacher(TeacherDto obj);
 
 	@Autowired
-	public void update(TeacherDto obj);
+	public void updateTeacher(TeacherDto obj);
 	
 	@Autowired
-	public void delete(String id);
+	public void deleteTeacher(String id);
 	
 	@Autowired
 	public TeacherDto findById(String id);
@@ -27,5 +27,5 @@ public interface ITeacherService {
 	public List<TeacherDto> findByName(String name);
 	
 	@Autowired
-	public List<String> getAllID();
+	public List<String> selectID();
 }

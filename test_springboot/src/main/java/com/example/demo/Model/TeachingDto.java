@@ -1,7 +1,5 @@
 package com.example.demo.Model;
 
-import java.sql.Date;
-
 public class TeachingDto {
 	private int ID;
 	private String ID_Teacher;

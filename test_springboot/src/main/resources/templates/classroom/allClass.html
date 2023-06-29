@@ -28,7 +28,7 @@
 	<div th:replace="~{/templates/menu::menu}"></div>
 
 	<div class="container-fluid"
-		style="margin: 0px; padding: 0px; max-width: 100%;">
+		style="margin: 0px; padding: 0px; max-width: 100%; height: 687px">
 		<nav class="navbar navbar-light bg-light"
 			style="width: 100%; padding: 7px 0px 7px 20px;">
 			<div class="container-fluid">
@@ -70,7 +70,7 @@
 						<td>
 						<a  th:href="@{/admin/updateClass/{id}(id=${c.id})}"
 							class="btn btn-success">Update </a> 
-						<a th:onclick="|doDelete('${c.id}')|" class="btn btn-danger">Delete</a>
+						<a th:data-ID="${c.id}" onclick="doDelete(this.getAttribute('data-ID'))" class="btn btn-danger">Delete</a>
 						<a th:href="@{/admin/list-student-of-class/{id}(id=${c.id})}"
 							class="btn btn-success">View</a> 
 						</td>

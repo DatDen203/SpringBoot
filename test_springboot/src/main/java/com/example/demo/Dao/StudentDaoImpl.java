@@ -23,7 +23,7 @@ public class StudentDaoImpl implements IStudentDao {
 	@Override
 	public int insert(StudentDto obj) {
 		// TODO Auto-generated method stub
-		return studentDaoMapper.insert(obj);
+		return studentDaoMapper.insertStudent(obj);
 	}
 
 	@Override
@@ -47,13 +47,13 @@ public class StudentDaoImpl implements IStudentDao {
 	@Override
 	public void update(StudentDto obj) {
 		// TODO Auto-generated method stub
-		studentDaoMapper.update(obj);
+		studentDaoMapper.updateStudent(obj);
 	}
 
 	@Override
 	public void delete(String ID) {
 		// TODO Auto-generated method stub
-		studentDaoMapper.delete(ID);
+		studentDaoMapper.deleteStudent(ID);
 	}
 
 }

@@ -56,7 +56,7 @@ public class StudentApi {
 		service.delete(id);
 	}
 
-	@GetMapping("/find-student/{id}")
+	@GetMapping("/student/{id}")
 	public StudentDto findById(@PathVariable("id") int id) {
 		return service.findbyId(id);
 	}

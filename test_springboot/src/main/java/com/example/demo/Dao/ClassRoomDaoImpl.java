@@ -10,28 +10,28 @@ import com.example.demo.Model.ClassRoomDto;
 
 @Repository
 public class ClassRoomDaoImpl implements IClassRoomDao {
-
+	
 	@Autowired
 	private ClassRoomDaoMapper classroomMapper;
 
 	@Override
-	public int insert(ClassRoomDto obj) {
-		return classroomMapper.insert(obj);
+	public int insertClassRoom(ClassRoomDto obj) {
+		return classroomMapper.insertClassRoom(obj);
 	}
 
 	@Override
-	public void update(ClassRoomDto obj) {
-		classroomMapper.update(obj);
+	public void updateClassRoom(ClassRoomDto obj) {
+		classroomMapper.updateClassRoom(obj);
 	}
 
 	@Override
-	public List<ClassRoomDto> GetListClass() {
-		return classroomMapper.GetListClass();
+	public List<ClassRoomDto> selectAll() {
+		return classroomMapper.selectAll();
 	}
 
 	@Override
-	public void delete(String id) {
-		classroomMapper.delete(id);
+	public void deleteClassRoom(String id) {
+		classroomMapper.deleteClassRoom(id);
 	}
 
 	@Override

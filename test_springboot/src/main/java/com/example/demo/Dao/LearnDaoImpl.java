@@ -23,7 +23,7 @@ public class LearnDaoImpl implements ILearnDao{
 	@Override
 	public List<LearnDto> getAllStudentOneClass(String id) {
 		// TODO Auto-generated method stub
-		return learnDaoMapper.getAllStudentOneClass(id);
+		return learnDaoMapper.gelAllStudentOneClass(id);
 	}
 	
 

@@ -26,7 +26,7 @@ public class TeacherController {
 	@RequestMapping(value = "admin/allTeacher")
 	public ModelAndView student() {
 		ModelAndView mv = new ModelAndView("teacher/listTeacher");
-		mv.addObject("listTeacher", TeacherService.GetListTeacher());
+		mv.addObject("listTeacher", TeacherService.selectAll());
 		return mv;
 	}
 
@@ -41,7 +41,7 @@ public class TeacherController {
 
 	@RequestMapping(value = "admin/saveAddTeacher", method = RequestMethod.POST)
 	public ModelAndView insertTeacher(@ModelAttribute TeacherDto obj) {
-		List<String> ls = TeacherService.getAllID();
+		List<String> ls = TeacherService.selectID();
 		System.out.println(ls.toString());
 
 		ModelAndView mav = new ModelAndView();
@@ -49,7 +49,7 @@ public class TeacherController {
 		if (ls.contains(obj.getID_Teacher()) == false) {
 			try {
 				mav.setViewName("redirect:/admin/allTeacher");
-				TeacherService.insert(obj);
+				TeacherService.insertTeacher(obj);
 			} catch (Exception e) {
 				mav.addObject("title", "Add New Teacher");
 				mav.addObject("obj", obj);
@@ -71,7 +71,7 @@ public class TeacherController {
 
 	@RequestMapping(value = "admin/saveUpdateTeacher", method = RequestMethod.POST)
 	public ModelAndView updateTeacher(@ModelAttribute TeacherDto obj) {
-		List<String> ls = TeacherService.getAllID();
+		List<String> ls = TeacherService.selectID();
 		System.out.println(ls.toString());
 
 		ModelAndView mav = new ModelAndView();
@@ -79,7 +79,7 @@ public class TeacherController {
 			try {
 
 				mav.setViewName("redirect:/admin/allTeacher");
-				TeacherService.update(obj);
+				TeacherService.updateTeacher(obj);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -129,7 +129,7 @@ public class TeacherController {
 	
 	@RequestMapping(value = "/admin/deleteTeacher", method = RequestMethod.GET)
 	public ModelAndView deleteTeacher(@RequestParam("idTeacher") String id) {
-		TeacherService.delete(id);
+		TeacherService.deleteTeacher(id);
 		return new ModelAndView("redirect:/admin/allTeacher");
 	}
 

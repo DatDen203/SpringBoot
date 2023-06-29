@@ -22,12 +22,12 @@ public class ClassRoomService implements IClassRoomService{
 	@Autowired 
 	private StudentDaoImpl daoStudent;
 	
-	public List<ClassRoomDto> GetListClass(){
-		return dao.GetListClass();
+	public List<ClassRoomDto> selectAll(){
+		return dao.selectAll();
 	}
 
-	public void delete(String id) {
-		dao.delete(id);
+	public void deleteClassRoom(String id) {
+		dao.deleteClassRoom(id);
 	}
 
 	public ClassRoomDto findById(String id) {
@@ -51,15 +51,15 @@ public class ClassRoomService implements IClassRoomService{
 	}
 
 	@Override
-	public int insert(ClassRoomDto obj) {
+	public int insertClassRoom(ClassRoomDto obj) {
 		// TODO Auto-generated method stub
-		return dao.insert(obj);
+		return dao.insertClassRoom(obj);
 	}
 
 	@Override
-	public void update(ClassRoomDto obj) {
+	public void updateClassRoom(ClassRoomDto obj) {
 		// TODO Auto-generated method stub
-		dao.update(obj);
+		dao.updateClassRoom(obj);
 	}
 
 	@Override
@@ -76,4 +76,6 @@ public class ClassRoomService implements IClassRoomService{
 		}
 		return studentOfClass;
 	}
+
+
 }

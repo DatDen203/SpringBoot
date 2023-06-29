@@ -3,7 +3,7 @@
 
 <mapper namespace="com.example.demo.Mapper.StudentDaoMapper">
 
-	<resultMap type="com.example.demo.Model.StudentDto" id="result">
+	<resultMap type="StudentDto" id="result">
 		<result property="ID" column="ID" />
 		<result property="ID_USER" column="ID_USER" />
 		<result property="email" column="email" />

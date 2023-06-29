@@ -15,15 +15,15 @@ public class TeacherDaoImpl implements ITeacherDao {
 	private TeacherDaoMapper teacherDaoMapper;
 	
 	@Override
-	public List<TeacherDto> GetListTeacher() {
+	public List<TeacherDto> selectAll() {
 		// TODO Auto-generated method stub
-		return teacherDaoMapper.GetListTeacher();
+		return teacherDaoMapper.selectAll();
 	}
 
 	@Override
-	public int insert(TeacherDto obj) {
+	public int insertTeacher(TeacherDto obj) {
 		// TODO Auto-generated method stub
-		return teacherDaoMapper.insert(obj);
+		return teacherDaoMapper.insertTeacher(obj);
 	}
 
 	@Override
@@ -39,21 +39,21 @@ public class TeacherDaoImpl implements ITeacherDao {
 	}
 
 	@Override
-	public void update(TeacherDto obj) {
+	public void updateTeacher(TeacherDto obj) {
 		// TODO Auto-generated method stub
-		teacherDaoMapper.update(obj);
+		teacherDaoMapper.updateTeacher(obj);
 	}
 
 	@Override
-	public void delete(String ID) {
+	public void deleteTeacher(String ID) {
 		// TODO Auto-generated method stub
-		teacherDaoMapper.delete(ID);
+		teacherDaoMapper.deleteTeacher(ID);
 	}
 
 	@Override
-	public List<String> getAllID() {
+	public List<String> selectID() {
 		// TODO Auto-generated method stub
-		return teacherDaoMapper.getAllID();
+		return teacherDaoMapper.selectID();
 	}
 	
 }

@@ -31,7 +31,7 @@ public class ClassRoomController {
 	@RequestMapping(value = "/allClass")
 	public ModelAndView student() {
 		ModelAndView mv = new ModelAndView("classroom/allClass");
-		mv.addObject("listClass", ClassRoomService.GetListClass());
+		mv.addObject("listClass", ClassRoomService.selectAll());
 		return mv;
 	}
 
@@ -59,9 +59,9 @@ public class ClassRoomController {
 		try {
 			
 			if (objCheck == null) {
-				ClassRoomService.insert(obj);
+				ClassRoomService.insertClassRoom(obj);
 			} else {
-				ClassRoomService.update(obj);
+				ClassRoomService.updateClassRoom(obj);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -94,7 +94,7 @@ public class ClassRoomController {
 
 	@RequestMapping(value = "/admin/deleteClass", method = RequestMethod.GET)
 	public ModelAndView deleteClass(@RequestParam("idClass") String id) {
-		ClassRoomService.delete(id);
+		ClassRoomService.deleteClassRoom(id);
 		return new ModelAndView("redirect:/allClass");
 	}
 	

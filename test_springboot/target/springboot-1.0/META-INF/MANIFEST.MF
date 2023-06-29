@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Implementation-Title: demo_springboot-1
+Implementation-Version: 1.0
+Built-By: Admin
+Implementation-Vendor-Id: com.example
+Spring-Boot-Version: 2.3.6.RELEASE
+Main-Class: org.springframework.boot.loader.JarLauncher
+Spring-Boot-Classpath-Index: BOOT-INF/classpath.idx
+Start-Class: com.example.demo.DemoSpringboot1Application
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+Created-By: Apache Maven 3.5.3
+Build-Jdk: 1.8.0_191
+Implementation-URL: https://spring.io/projects/spring-boot/springboot
+
